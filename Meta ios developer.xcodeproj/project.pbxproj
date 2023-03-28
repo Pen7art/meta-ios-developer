@@ -14,6 +14,13 @@
 		40290FE929D1E65700FAC685 /* Meta_ios_developerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40290FE829D1E65700FAC685 /* Meta_ios_developerTests.swift */; };
 		40290FF329D1E65700FAC685 /* Meta_ios_developerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40290FF229D1E65700FAC685 /* Meta_ios_developerUITests.swift */; };
 		40290FF529D1E65700FAC685 /* Meta_ios_developerUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40290FF429D1E65700FAC685 /* Meta_ios_developerUITestsLaunchTests.swift */; };
+		40C61C4C29D36D3E0095FA31 /* MenuItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40C61C4B29D36D3E0095FA31 /* MenuItem.swift */; };
+		40C61C4F29D376170095FA31 /* Home.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40C61C4E29D376170095FA31 /* Home.swift */; };
+		40C61C5129D3765E0095FA31 /* Menu.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40C61C5029D3765E0095FA31 /* Menu.swift */; };
+		40C61C5329D379FA0095FA31 /* UserProfile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40C61C5229D379FA0095FA31 /* UserProfile.swift */; };
+		40EB423B29D249AE0012C35E /* Onboarding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40EB423A29D249AE0012C35E /* Onboarding.swift */; };
+		40EB423C29D249AE0012C35E /* Onboarding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40EB423A29D249AE0012C35E /* Onboarding.swift */; };
+		40EB423D29D249AE0012C35E /* Onboarding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40EB423A29D249AE0012C35E /* Onboarding.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +51,11 @@
 		40290FEE29D1E65700FAC685 /* Meta ios developerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Meta ios developerUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		40290FF229D1E65700FAC685 /* Meta_ios_developerUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Meta_ios_developerUITests.swift; sourceTree = "<group>"; };
 		40290FF429D1E65700FAC685 /* Meta_ios_developerUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Meta_ios_developerUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		40C61C4B29D36D3E0095FA31 /* MenuItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuItem.swift; sourceTree = "<group>"; };
+		40C61C4E29D376170095FA31 /* Home.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Home.swift; sourceTree = "<group>"; };
+		40C61C5029D3765E0095FA31 /* Menu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Menu.swift; sourceTree = "<group>"; };
+		40C61C5229D379FA0095FA31 /* UserProfile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProfile.swift; sourceTree = "<group>"; };
+		40EB423A29D249AE0012C35E /* Onboarding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Onboarding.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -94,6 +106,8 @@
 		40290FD629D1E65600FAC685 /* Meta ios developer */ = {
 			isa = PBXGroup;
 			children = (
+				40C61C4D29D374690095FA31 /* view */,
+				40C61C4A29D36D1B0095FA31 /* model */,
 				40290FD729D1E65600FAC685 /* Meta_ios_developerApp.swift */,
 				40290FD929D1E65600FAC685 /* ContentView.swift */,
 				40290FDB29D1E65600FAC685 /* Assets.xcassets */,
@@ -125,6 +139,25 @@
 				40290FF429D1E65700FAC685 /* Meta_ios_developerUITestsLaunchTests.swift */,
 			);
 			path = "Meta ios developerUITests";
+			sourceTree = "<group>";
+		};
+		40C61C4A29D36D1B0095FA31 /* model */ = {
+			isa = PBXGroup;
+			children = (
+				40C61C4B29D36D3E0095FA31 /* MenuItem.swift */,
+			);
+			path = model;
+			sourceTree = "<group>";
+		};
+		40C61C4D29D374690095FA31 /* view */ = {
+			isa = PBXGroup;
+			children = (
+				40EB423A29D249AE0012C35E /* Onboarding.swift */,
+				40C61C4E29D376170095FA31 /* Home.swift */,
+				40C61C5029D3765E0095FA31 /* Menu.swift */,
+				40C61C5229D379FA0095FA31 /* UserProfile.swift */,
+			);
+			path = view;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -257,6 +290,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				40C61C5129D3765E0095FA31 /* Menu.swift in Sources */,
+				40EB423B29D249AE0012C35E /* Onboarding.swift in Sources */,
+				40C61C5329D379FA0095FA31 /* UserProfile.swift in Sources */,
+				40C61C4C29D36D3E0095FA31 /* MenuItem.swift in Sources */,
+				40C61C4F29D376170095FA31 /* Home.swift in Sources */,
 				40290FDA29D1E65600FAC685 /* ContentView.swift in Sources */,
 				40290FD829D1E65600FAC685 /* Meta_ios_developerApp.swift in Sources */,
 			);
@@ -266,6 +304,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				40EB423C29D249AE0012C35E /* Onboarding.swift in Sources */,
 				40290FE929D1E65700FAC685 /* Meta_ios_developerTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -274,6 +313,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				40EB423D29D249AE0012C35E /* Onboarding.swift in Sources */,
 				40290FF529D1E65700FAC685 /* Meta_ios_developerUITestsLaunchTests.swift in Sources */,
 				40290FF329D1E65700FAC685 /* Meta_ios_developerUITests.swift in Sources */,
 			);
