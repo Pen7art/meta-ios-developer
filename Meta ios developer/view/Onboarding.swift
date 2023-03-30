@@ -24,9 +24,13 @@ struct Onboarding: View {
                 NavigationLink(destination: Home(), isActive: $isLoggedIn) {
                     EmptyView()
                 }
+                Text("Welcome to the Little Lemon restaurant")
+                    .padding()
+                Text("Please insert your data")
                 TextField("First Name", text: $firstName)
                 TextField("Last Name", text: $lastName)
                 TextField("Email", text: $email)
+                    .padding(.bottom)
                 Button("Register") {
                     if firstName.isEmpty || lastName.isEmpty || email.isEmpty {
                         return
@@ -37,7 +41,9 @@ struct Onboarding: View {
                     UserDefaults.standard.set(true, forKey: isLoggedInKey)
                     isLoggedIn = true
                 }
-            }.onAppear{
+                
+            }.padding()
+            .onAppear{
                 if UserDefaults.standard.bool(forKey: isLoggedInKey) {
                     isLoggedIn = true
                 }
