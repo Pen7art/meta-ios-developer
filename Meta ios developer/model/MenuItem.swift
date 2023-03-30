@@ -7,14 +7,8 @@
 
 import Foundation
 
-struct JSONMenu: Codable {
-    let menu: [MenuItem]
-}
-
-
-struct MenuItem: Codable {
-    let name: String
-    let price: Float
-    let description: String
+struct MenuItem: Decodable {
+    let title: String
+    let price: String
     let image: String
 }
