@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		400792B929D5C68B006C82DF /* wireframe.png in Resources */ = {isa = PBXBuildFile; fileRef = 400792B829D5C68B006C82DF /* wireframe.png */; };
 		40290FD829D1E65600FAC685 /* Meta_ios_developerApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40290FD729D1E65600FAC685 /* Meta_ios_developerApp.swift */; };
 		40290FDA29D1E65600FAC685 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40290FD929D1E65600FAC685 /* ContentView.swift */; };
 		40290FDC29D1E65600FAC685 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 40290FDB29D1E65600FAC685 /* Assets.xcassets */; };
@@ -45,6 +46,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		400792B829D5C68B006C82DF /* wireframe.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = wireframe.png; sourceTree = "<group>"; };
 		40290FD429D1E65600FAC685 /* Meta ios developer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Meta ios developer.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		40290FD729D1E65600FAC685 /* Meta_ios_developerApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Meta_ios_developerApp.swift; sourceTree = "<group>"; };
 		40290FD929D1E65600FAC685 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -114,6 +116,7 @@
 		40290FD629D1E65600FAC685 /* Meta ios developer */ = {
 			isa = PBXGroup;
 			children = (
+				400792B829D5C68B006C82DF /* wireframe.png */,
 				408758C429D4C12D00018A22 /* ExampleDatabase.xcdatamodeld */,
 				408758C029D4BAC300018A22 /* Persistence.swift */,
 				408758BE29D4BAB800018A22 /* FetchedObjects.swift */,
@@ -278,6 +281,7 @@
 			files = (
 				40290FDF29D1E65600FAC685 /* Preview Assets.xcassets in Resources */,
 				40290FDC29D1E65600FAC685 /* Assets.xcassets in Resources */,
+				400792B929D5C68B006C82DF /* wireframe.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -10,6 +10,8 @@ import SwiftUI
 struct Menu: View {
     @Environment(\.managedObjectContext) private var viewContext
     @State var searchText = ""
+    @State var categories: Set<String> = []
+    @State var selectedCategories: Set<String> = []
     
     func buildPredicate() -> NSPredicate{
         if searchText.isEmpty {
@@ -36,6 +38,9 @@ struct Menu: View {
                     dish.title = menuItem.title
                     dish.price = menuItem.price
                     dish.image = menuItem.image
+                    dish.category = menuItem.category
+                    
+                    categories.insert(menuItem.category)
                 })
                 try? viewContext.save()
             }
@@ -46,10 +51,54 @@ struct Menu: View {
     
     var body: some View {
         VStack {
-            Text("Title")
-            Text("Restaurant")
-            Text("Description")
-            TextField("Search menu", text: $searchText)
+            HStack {
+                Spacer()
+                Image("little-lemon-logo")
+                    .resizable()
+                    .scaledToFit()
+                    .frame(width: 40, height: 40)
+                Text("Little Lemon")
+                Spacer()
+                Image("profile-image-placeholder")
+                    .resizable()
+                    .scaledToFit()
+                    .clipShape(Circle())
+                    .frame(width: 40, height: 40)
+            }.padding(.bottom)
+            VStack(alignment: .leading){
+                Text("Litte Lemon")
+                    .foregroundColor(.yellow)
+                    .padding(.top)
+                Text("Chicago")
+                    .padding(.bottom)
+                HStack {
+                    Text("We are a family owned Mediterranean restaurant focused on traditional recipes served with a modern twist.")
+                        .padding(.bottom)
+                    Image("lasagna")
+                        .resizable()
+                        .scaledToFit()
+                }
+                TextField("Search menu", text: $searchText)
+            }.padding()
+            .background(Color.green)
+            ScrollView(.horizontal) {
+                HStack {
+                    ForEach(categories.sorted(by: <), id: \.self) { category in
+                        Button(category) {
+                            if selectedCategories.contains(category){
+                                selectedCategories.remove(category)
+                            } else {
+                                selectedCategories.insert(category)
+                            }
+                        }
+                        .padding()
+                        .border(.gray, width: 1)
+                        .background(selectedCategories.contains(category) ? Color.green: Color.white)
+                        
+                    }
+                }
+            }
+            
             FetchedObjects(predicate: buildPredicate() ,sortDescriptors: buildSortDescriptors()){(dishes: [Dish]) in
                 List {
                     ForEach(dishes) { dish in
@@ -66,6 +115,7 @@ struct Menu: View {
                 }
                 
             }
+            Spacer()
         }.onAppear{
             getMenuData()
         }
